@@ -36,7 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\SemanticAssertions\SemanticAssertions.csproj" />
+    <ProjectReference Include="..\SemanticAssertions\SemanticAssertions.csproj" />
   </ItemGroup>
 
 </Project>
