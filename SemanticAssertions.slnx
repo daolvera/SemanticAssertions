@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/SemanticAssertions/SemanticAssertions.csproj" />
+  <Project Path="SemanticAssertions.Tests/SemanticAssertions.Tests.csproj" />
+</Solution>
