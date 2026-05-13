@@ -1,4 +1,9 @@
 <Solution>
   <Project Path="SemanticAssertions/SemanticAssertions.csproj" />
+  <Folder Name="/Solution Items/">
+    <File Path="../.gitattributes" />
+    <File Path="../.gitignore" />
+    <File Path="../README.md" />
+  </Folder>
   <Project Path="SemanticAssertions.Tests/SemanticAssertions.Tests.csproj" />
 </Solution>
