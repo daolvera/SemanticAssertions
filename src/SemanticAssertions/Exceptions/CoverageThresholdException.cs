@@ -1,3 +1,4 @@
+using System.Globalization;
 using SemanticAssertions.Models;
 
 namespace SemanticAssertions.Exceptions;
@@ -17,7 +18,7 @@ public sealed class CoverageThresholdException : SemanticAssertionException
         GraderResult? graderResult = null,
         IReadOnlyList<ToolInvocation>? toolInvocations = null)
         : base(
-            $"Coverage {actualCoverage:P0} is below minimum threshold {requiredCoverage:P0}. " +
+            $"Coverage {actualCoverage.ToString("P0", CultureInfo.InvariantCulture)} is below minimum threshold {requiredCoverage.ToString("P0", CultureInfo.InvariantCulture)}. " +
             FormatUnmet(graderResult),
             failures,
             graderResult: graderResult,

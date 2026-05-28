@@ -1,3 +1,4 @@
+using System.Globalization;
 using SemanticAssertions.Models;
 
 namespace SemanticAssertions.Exceptions;
@@ -29,7 +30,7 @@ public sealed class EssentialStateMissedException : SemanticAssertionException
     {
         var stateList = string.Join(", ", missedStates.Select(s => $"'{s}'"));
         var coverage = graderResult is not null
-            ? $" Coverage: {graderResult.Coverage:P0}"
+            ? $" Coverage: {graderResult.Coverage.ToString("P0", CultureInfo.InvariantCulture)}"
             : string.Empty;
         return $"Essential states not reached: [{stateList}].{coverage}";
     }
