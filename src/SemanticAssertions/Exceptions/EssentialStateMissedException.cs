@@ -29,7 +29,7 @@ public sealed class EssentialStateMissedException : SemanticAssertionException
     {
         var stateList = string.Join(", ", missedStates.Select(s => $"'{s}'"));
         var coverage = graderResult is not null
-            ? $" Coverage: {graderResult.Coverage:P0}"
+            ? $" Coverage: {(int)Math.Round(graderResult.Coverage * 100)}%"
             : string.Empty;
         return $"Essential states not reached: [{stateList}].{coverage}";
     }

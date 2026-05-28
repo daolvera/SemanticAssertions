@@ -17,7 +17,7 @@ public sealed class CoverageThresholdException : SemanticAssertionException
         GraderResult? graderResult = null,
         IReadOnlyList<ToolInvocation>? toolInvocations = null)
         : base(
-            $"Coverage {actualCoverage:P0} is below minimum threshold {requiredCoverage:P0}. " +
+            $"Coverage {(int)Math.Round(actualCoverage * 100)}% is below minimum threshold {(int)Math.Round(requiredCoverage * 100)}%. " +
             FormatUnmet(graderResult),
             failures,
             graderResult: graderResult,
